@@ -1,18 +1,21 @@
 import java.util.Scanner;
 class Circle{
     double radius;
-    void calculate(){
-        double area = Math.PI * radius * radius;
-        double circumference = 2 * Math.PI * radius;
-
+    Circle() {
+        this(5);
+    }
+    Circle(double r) {
+        radius = r;
+    }
+    void display() {
         System.out.println("Radius: " + radius);
-        System.out.println("Area of Circle: " + area);
-        System.out.println("Circumference of Circle: " + circumference);
     }
     public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        double r = input.nextDouble();
         Circle c1 = new Circle();
-        c1.radius = input.nextDouble();
-        c1.calculate();
+        Circle c2 = new Circle(r);
+        c1.display();
+        c2.display();
     }
 }
