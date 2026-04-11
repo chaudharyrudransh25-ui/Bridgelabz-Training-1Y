@@ -10,7 +10,6 @@ import static com.gla.ExceptionHandling.InterestCalculator.calculateInterest;
 public class Runner {
     static Scanner sc =new Scanner(System.in);
     public static void main(String[] args) {
-        /* Run Time */
         try{
             System.out.print("Enter 1st no.: ");
             int a=sc.nextInt();
@@ -25,14 +24,12 @@ public class Runner {
         catch(InputMismatchException e){
             System.out.println("Error: Please enter valid numeric values.");
         }
-        /* Invalid Age Checker Custom exception*/
         try{
             ageChecker(18);
         }
         catch(InvalidAgeChecker e){
             System.out.println(e);
         }
-        /*Multiple Catch*/
         try {
             System.out.print("Enter array size: ");
             int size = sc.nextInt();
@@ -71,7 +68,6 @@ public class Runner {
         catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-        /*Division*/
         try {
             System.out.print("Enter first integer: ");
             int num1 = sc.nextInt();
